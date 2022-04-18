@@ -1,10 +1,10 @@
 name: Release
 
-# push 到 main 分支時，會觸發此 workflow
+# push 到 master 分支時，會觸發此 workflow
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   release:
     name: Release
