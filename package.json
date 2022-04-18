@@ -116,13 +116,6 @@
     "tagFormat": "${version}",
     "plugins": [
       [
-        "@semantic-release/changelog",
-        {
-          "changelogFile": "docs/CHANGELOG.md"
-        }
-      ],
-      "@semantic-release/release-notes-generator",
-      [
         "@semantic-release/commit-analyzer",
         {
           "preset": "angular",
@@ -142,6 +135,13 @@
           ]
         }
       ],
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "docs/CHANGELOG.md"
+        }
+      ],
       [
         "@semantic-release/npm",
         {
@@ -151,7 +151,9 @@
       [
         "@semantic-release/git",
         {
-          "assets": ["docs/CHANGELOG.md"]
+          "assets": [
+            "docs/CHANGELOG.md"
+          ]
         }
       ]
     ]
