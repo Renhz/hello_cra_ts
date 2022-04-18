@@ -115,7 +115,12 @@
     ],
     "tagFormat": "${version}",
     "plugins": [
-      "@semantic-release/changelog",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "docs/CHANGELOG.md"
+        }
+      ],
       "@semantic-release/release-notes-generator",
       [
         "@semantic-release/commit-analyzer",
@@ -146,7 +151,7 @@
       [
         "@semantic-release/git",
         {
-          "message": "chore(release): ${nextRelease.version} [ci skip]\n\n${nextRelease.notes}"
+          "assets": ["docs/CHANGELOG.md"]
         }
       ]
     ]
