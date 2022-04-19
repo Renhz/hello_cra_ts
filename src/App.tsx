@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import './App.css';
+import Dashboard from './components/dashboard/Dashboard';
+import Homepage from './pages/Homepage';
+import Test0 from './pages/Test0';
+import Test1 from './pages/Test1';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />}>
+          <Route index element={<Homepage />} />
+          <Route path="tools/chartpie" element={<Test0 />} />
+          <Route path="tools/chartpie" element={<Test1 />} />
+        </Route>
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: '1rem' }}>
+              <p>There$aposs nothing here!</p>
+            </main>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

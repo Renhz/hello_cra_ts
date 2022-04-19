@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# 測試專案
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+本專案以 [Create React App](https://github.com/facebook/create-react-app) 建立
 
-## Available Scripts
+## 腳本
 
-In the project directory, you can run:
+在本專案資料夾，你可以執行:
 
 ### `npm start`
 
