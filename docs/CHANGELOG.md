@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Renhz/test_cra_ts/compare/1.1.0...1.2.0) (2022-04-20)
+
+
+### Features
+
+* 以react-router設定簡單的路由 ([b421f06](https://github.com/Renhz/test_cra_ts/commit/b421f06480e9578a4076672a009bbb2e0003d741))
+
 # [1.1.0](https://github.com/Renhz/test_cra_ts/compare/1.0.0...1.1.0) (2022-04-19)
 
 
