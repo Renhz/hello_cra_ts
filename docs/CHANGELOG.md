@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/Renhz/test_cra_ts/compare/1.3.1...1.4.0) (2022-04-21)
+
+
+### Features
+
+* 使用mui的layout components實作一些基本的排版 ([d263e8c](https://github.com/Renhz/test_cra_ts/commit/d263e8c7f10214e32f46991c8e356ad22dc70904))
+
 ## [1.3.1](https://github.com/Renhz/test_cra_ts/compare/1.3.0...1.3.1) (2022-04-21)
 
 
