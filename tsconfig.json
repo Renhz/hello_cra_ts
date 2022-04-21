@@ -11,6 +11,15 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
+    // 包含
+    // alwaysStrict
+    // strictNullChecks
+    // strictBindCallApply
+    // strictFunctionTypes
+    // strictPropertyInitialization
+    // noImplicitAny
+    // noImplicitThis
+    // useUnknownInCatchVariables
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
@@ -31,7 +40,6 @@
     "noImplicitReturns": true,
     "noUncheckedIndexedAccess": true ,
     "noImplicitOverride": true ,
-
   },
   "include": [
     "src"

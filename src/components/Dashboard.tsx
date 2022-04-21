@@ -114,17 +114,6 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-const modeLight = {
-  palette: {
-    mode: 'light',
-  },
-};
-const modeDark = {
-  palette: {
-    mode: 'dark',
-  },
-};
-
 function DashboardContent() {
   const [mode, setMode] = React.useState<'light' | 'dark'>('light');
   const myTheme = React.useMemo(
