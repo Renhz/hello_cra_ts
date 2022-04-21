@@ -114,7 +114,6 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-const mdTheme = createTheme();
 const modeLight = {
   palette: {
     mode: 'light',
@@ -127,17 +126,29 @@ const modeDark = {
 };
 
 function DashboardContent() {
-  const [isDarkMode, setIsDarkTheme] = React.useState(false);
-  const changeTheme = () => {
-    setIsDarkTheme(!isDarkMode);
-  };
+  const [mode, setMode] = React.useState<'light' | 'dark'>('light');
+  const myTheme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+        },
+      }),
+    [mode]
+  );
+  const toggleColorMode = React.useMemo(
+    () => () => {
+      setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+    },
+    []
+  );
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
   };
 
   return (
-    <ThemeProvider theme={isDarkMode ? createTheme({modeDark}) : createTheme(modeLight)}>
+    <ThemeProvider theme={myTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
         <AppBar position="absolute" open={open}>
@@ -159,7 +170,7 @@ function DashboardContent() {
             <Typography component="h1" variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
               Dashboard
             </Typography>
-            <MaterialUISwitch onChange={changeTheme} />
+            <MaterialUISwitch onChange={toggleColorMode} />
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
