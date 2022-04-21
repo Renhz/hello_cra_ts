@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/Renhz/test_cra_ts/compare/1.2.0...1.3.0) (2022-04-20)
+
+
+### Features
+
+* 切換淺色及深色主題 ([5ed28ba](https://github.com/Renhz/test_cra_ts/commit/5ed28ba5ec04e9a12717d435cafe5b18d7a7e8f4))
+
 # [1.2.0](https://github.com/Renhz/test_cra_ts/compare/1.1.0...1.2.0) (2022-04-20)
 
 
