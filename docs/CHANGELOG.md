@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/Renhz/test_cra_ts/compare/1.3.0...1.3.1) (2022-04-21)
+
+
+### Bug Fixes
+
+* 修正切換深色淺色模式的程式碼 ([98b5d08](https://github.com/Renhz/test_cra_ts/commit/98b5d08753921fa0e67c6812a0d6a9d4e7d23cf0))
+
 # [1.3.0](https://github.com/Renhz/test_cra_ts/compare/1.2.0...1.3.0) (2022-04-20)
 
 
