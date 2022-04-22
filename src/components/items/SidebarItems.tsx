@@ -52,24 +52,3 @@ export default function SidebarItems() {
     </>
   );
 }
-
-/**
-export default function SidebarList() {
-  return (
-    <Router>
-      <ListItemButton>
-        <ListItemIcon>
-          <DashboardIcon />
-        </ListItemIcon>
-        <ListItemText primary="Dashboard" />
-      </ListItemButton>
-      <ListSubheader component="div" inset>
-        測試項目
-      </ListSubheader>
-      {sidebarItems.map(({ primary, icon, to }) => (
-        <ListItemLink key={primary} icon={icon} to={to} primary={primary} />
-      ))}
-    </Router>
-  );
-}
-*/
