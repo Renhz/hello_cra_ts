@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/Renhz/test_cra_ts/compare/1.4.0...1.4.1) (2022-04-22)
+
+
+### Bug Fixes
+
+* 不要用延展運算子傳遞所有props ([4551d77](https://github.com/Renhz/test_cra_ts/commit/4551d77e2bb4076e5b7597a205e9cb05317f4090))
+
 # [1.4.0](https://github.com/Renhz/test_cra_ts/compare/1.3.1...1.4.0) (2022-04-21)
 
 
