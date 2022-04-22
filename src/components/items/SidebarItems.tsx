@@ -23,7 +23,9 @@ function ListItemLink(props: sidebarItem) {
   const renderLink = React.useMemo(
     () =>
       React.forwardRef<HTMLAnchorElement, Omit<LinkProps, 'to'>>((itemProps, ref) => (
-        <Link to={to} ref={ref} {...itemProps} role={undefined} />
+        <Link to={to} ref={ref} role={undefined} className={itemProps.className}>
+          {itemProps.children}
+        </Link>
       )),
     [to]
   );
