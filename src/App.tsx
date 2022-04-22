@@ -5,6 +5,7 @@ import { StaticRouter } from 'react-router-dom/server';
 import './App.css';
 import Dashboard from './components/Dashboard';
 import Homepage from './pages/Homepage';
+import PageNotFound from './pages/PageNotFound';
 import Test0 from './pages/Test0';
 import Test1 from './pages/Test1';
 
@@ -24,15 +25,8 @@ function App() {
           <Route index element={<Homepage />} />
           <Route path="test0" element={<Test0 />} />
           <Route path="test1" element={<Test1 />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
-        <Route
-          path="*"
-          element={
-            <main style={{ padding: '1rem' }}>
-              <p>There is nothing here!</p>
-            </main>
-          }
-        />
       </Routes>
     </Router>
   );
