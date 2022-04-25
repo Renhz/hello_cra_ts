@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/Renhz/test_cra_ts/compare/1.5.1...1.6.0) (2022-04-25)
+
+
+### Features
+
+* counter元件單元測試 ([34754a3](https://github.com/Renhz/test_cra_ts/commit/34754a3bb99dccaf10b82f12b1c0167552811b36))
+
 ## [1.5.1](https://github.com/Renhz/test_cra_ts/compare/1.5.0...1.5.1) (2022-04-25)
 
 
