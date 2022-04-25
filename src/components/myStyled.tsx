@@ -1,4 +1,4 @@
-﻿import { Drawer, Switch } from '@mui/material/';
+﻿import { Drawer, Switch, Paper } from '@mui/material/';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import { styled } from '@mui/material/styles';
 
@@ -97,4 +97,12 @@ export const SwitchDayNight = styled(Switch)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
     borderRadius: 20 / 2,
   },
+}));
+
+export const MyPaper = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body1,
+  padding: theme.spacing(1),
+  textAlign: 'left',
+  color: theme.palette.text.primary,
 }));

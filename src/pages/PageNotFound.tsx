@@ -2,7 +2,7 @@
 import { Box, Divider, Grid, Typography } from '@mui/material';
 import React from 'react';
 
-import MyPaper from 'components/items/myItems';
+import { MyPaper } from 'components/myStyled';
 
 function PageNotFound() {
   return (
