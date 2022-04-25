@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/Renhz/test_cra_ts/compare/1.5.0...1.5.1) (2022-04-25)
+
+
+### Bug Fixes
+
+* getByRole的設定項name格式, 修正為正規表達式才能部分match ([f9e25cd](https://github.com/Renhz/test_cra_ts/commit/f9e25cdf84b251ac0ede35477eb9baf5461b4bcf))
+
 # [1.5.0](https://github.com/Renhz/test_cra_ts/compare/1.4.2...1.5.0) (2022-04-25)
 
 
