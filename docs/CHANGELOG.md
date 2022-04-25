@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/Renhz/test_cra_ts/compare/1.6.0...1.6.1) (2022-04-25)
+
+
+### Bug Fixes
+
+* merge changelog ([061d986](https://github.com/Renhz/test_cra_ts/commit/061d98630ab13dbb12d601c0e2beb7b18388876a))
+
 ## [1.5.1](https://github.com/Renhz/test_cra_ts/compare/1.5.0...1.5.1) (2022-04-25)
 
 
