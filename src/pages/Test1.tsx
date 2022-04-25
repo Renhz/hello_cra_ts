@@ -3,7 +3,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import React from 'react';
 
-import MyPaper from 'components/items/myItems';
+import {MyPaper} from 'components/myStyled';
 
 function Test1() {
   return (
