@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/Renhz/test_cra_ts/compare/1.4.1...1.4.2) (2022-04-25)
+
+
+### Bug Fixes
+
+* 將404頁面路由移到首頁的子路由中, 以獲取一致的主題樣式 ([f8bda8e](https://github.com/Renhz/test_cra_ts/commit/f8bda8e8c51a1beb0f6291d7978aa129206e2c1d))
+
 ## [1.4.1](https://github.com/Renhz/test_cra_ts/compare/1.4.0...1.4.1) (2022-04-22)
 
 
