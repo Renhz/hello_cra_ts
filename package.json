@@ -105,7 +105,6 @@
     }
   },
   "jest": {
-    "coverageDirectory": "coverage",
     "moduleNameMapper": {
       "~/(.*)": "<rootDir>/src/$1"
     },

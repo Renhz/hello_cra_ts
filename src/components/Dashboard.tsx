@@ -66,9 +66,10 @@ function DashboardContent() {
             sx={{
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'flex-end',
-              px: [1],
+              justifyContent: 'space-between',
+              px: [2],
             }}>
+            測試專案
             <IconButton onClick={toggleDrawer}>
               <ChevronLeftIcon />
             </IconButton>
