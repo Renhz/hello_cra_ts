@@ -3,7 +3,7 @@ import React from 'react';
 
 import App from './App';
 
-it('renders without crashing', () => {
+it('app成功渲染', () => {
   render(<App />);
   expect(screen.getByText('測試專案')).toBeInTheDocument();
 });

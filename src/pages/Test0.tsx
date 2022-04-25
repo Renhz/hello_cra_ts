@@ -5,13 +5,14 @@ import Counter from 'components/Counter';
 import { MyPaper } from 'components/myStyled';
 
 function Test0() {
-  const [count, setCount] = useState(0);
+  const initialCount = 0;
+  const [count, setCount] = useState(initialCount);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid item xs={8}>
           <Stack direction="row" spacing={2}>
-            <Counter setCount={setCount} />
+            <Counter initialCount={initialCount} setCount={setCount} />
           </Stack>
         </Grid>
         <Grid item xs={4}>
