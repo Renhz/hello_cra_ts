@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/Renhz/test_cra_ts/compare/1.6.1...1.6.2) (2022-04-26)
+
+
+### Bug Fixes
+
+* 修正部分錯誤程式碼, 也簡化並增加可讀性及彈性 ([a541e7e](https://github.com/Renhz/test_cra_ts/commit/a541e7ec3028d8f60d0102341ff2978cc04c2979))
+
 ## [1.6.1](https://github.com/Renhz/test_cra_ts/compare/1.6.0...1.6.1) (2022-04-25)
 
 
