@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/Renhz/test_cra_ts/compare/1.6.2...1.7.0) (2022-04-26)
+
+
+### Features
+
+* 新增InputPasswprd元件 ([9c293e9](https://github.com/Renhz/test_cra_ts/commit/9c293e942d0c87ddfb6733295d78b811cc58cf83))
+
 ## [1.6.2](https://github.com/Renhz/test_cra_ts/compare/1.6.1...1.6.2) (2022-04-26)
 
 
