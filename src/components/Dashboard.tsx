@@ -6,99 +6,96 @@ import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider, Theme } from '@mui/material/styles';
 import * as React from 'react';
 import { Outlet } from 'react-router-dom';
 
 import SidebarItems, { SidebarHomepage } from './items/SidebarItems';
+import DashboardContext from './myContext';
 import { DashboardAppBar, DashboardDrawer, SwitchDayNight } from './myStyled';
 
-function DashboardContent() {
-  const [mode, setMode] = React.useState<'light' | 'dark'>('light');
-  const myTheme = React.useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode,
-        },
-      }),
-    [mode]
-  );
-  const toggleColorMode = React.useMemo(
-    () => () => {
-      setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-    },
-    []
+function Dashboard() {
+  const [myTheme, setMyTheme] = React.useState<Theme>(
+    createTheme({
+      palette: {
+        mode: localStorage.getItem('colorMode') === 'light' ? 'light' : 'dark',
+      },
+    })
   );
   const [open, setOpen] = React.useState(true);
+  const context = React.useMemo(
+    () => ({
+      changeTheme: setMyTheme,
+    }),
+    []
+  );
   const toggleDrawer = () => {
     setOpen(!open);
   };
-
   return (
-    <ThemeProvider theme={myTheme}>
-      <Box sx={{ display: 'flex' }}>
-        <CssBaseline />
-        <DashboardAppBar position="absolute" open={open}>
-          <Toolbar
-            sx={{
-              pr: '24px', // keep right padding when drawer closed
-            }}>
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              onClick={toggleDrawer}
+    <DashboardContext.Provider value={context}>
+      <ThemeProvider theme={myTheme}>
+        <Box sx={{ display: 'flex' }}>
+          <CssBaseline />
+          <DashboardAppBar position="absolute" open={open}>
+            <Toolbar
               sx={{
-                marginRight: '36px',
-                ...(open && { display: 'none' }),
+                pr: '24px', // keep right padding when drawer closed
               }}>
-              <MenuIcon />
-            </IconButton>
-            <Typography component="h1" variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-              Dashboard
-            </Typography>
-            <SwitchDayNight onChange={toggleColorMode} />
-          </Toolbar>
-        </DashboardAppBar>
-        <DashboardDrawer variant="permanent" open={open}>
-          <Toolbar
+              <IconButton
+                edge="start"
+                color="inherit"
+                aria-label="open drawer"
+                onClick={toggleDrawer}
+                sx={{
+                  marginRight: '36px',
+                  ...(open && { display: 'none' }),
+                }}>
+                <MenuIcon />
+              </IconButton>
+              <Typography component="h1" variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
+                Dashboard
+              </Typography>
+              <SwitchDayNight />
+            </Toolbar>
+          </DashboardAppBar>
+          <DashboardDrawer variant="permanent" open={open}>
+            <Toolbar
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                px: [2],
+              }}>
+              測試專案
+              <IconButton onClick={toggleDrawer}>
+                <ChevronLeftIcon />
+              </IconButton>
+            </Toolbar>
+            <Divider />
+            <List component="nav" aria-label="main folders">
+              <SidebarHomepage />
+              <SidebarItems />
+            </List>
+          </DashboardDrawer>
+          <Box
+            component="main"
             sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              px: [2],
+              backgroundColor: (theme) =>
+                theme.palette.mode === 'light' ? theme.palette.grey[100] : theme.palette.grey[900],
+              flexGrow: 1,
+              height: '100vh',
+              overflow: 'auto',
             }}>
-            測試專案
-            <IconButton onClick={toggleDrawer}>
-              <ChevronLeftIcon />
-            </IconButton>
-          </Toolbar>
-          <Divider />
-          <List component="nav" aria-label="main folders">
-            <SidebarHomepage />
-            <SidebarItems />
-          </List>
-        </DashboardDrawer>
-        <Box
-          component="main"
-          sx={{
-            backgroundColor: (theme) =>
-              theme.palette.mode === 'light' ? theme.palette.grey[100] : theme.palette.grey[900],
-            flexGrow: 1,
-            height: '100vh',
-            overflow: 'auto',
-          }}>
-          <Toolbar />
-          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <Outlet />
-          </Container>
+            <Toolbar />
+            <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+              <Outlet />
+            </Container>
+          </Box>
         </Box>
-      </Box>
-    </ThemeProvider>
+      </ThemeProvider>
+    </DashboardContext.Provider>
   );
 }
 
-export default function Dashboard() {
-  return <DashboardContent />;
-}
+export default Dashboard;

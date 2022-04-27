@@ -2,6 +2,8 @@
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import { styled } from '@mui/material/styles';
 
+import SwitchColorMode from './myGeneralUI';
+
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
 }
@@ -52,7 +54,7 @@ export const DashboardDrawer = styled(Drawer, { shouldForwardProp: (prop) => pro
   })
 );
 
-export const SwitchDayNight = styled(Switch)(({ theme }) => ({
+export const SwitchDayNight = styled(SwitchColorMode)(({ theme }) => ({
   width: 62,
   height: 34,
   padding: 7,
