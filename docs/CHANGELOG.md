@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/Renhz/test_cra_ts/compare/1.7.1...1.8.0) (2022-04-27)
+
+
+### Features
+
+* 優化SwitchDayNight, 移至myGeneralUI, 搭配context ([edc16c9](https://github.com/Renhz/test_cra_ts/commit/edc16c9084873202d21ea30b5b70857487f26640))
+
 ## [1.7.1](https://github.com/Renhz/test_cra_ts/compare/1.7.0...1.7.1) (2022-04-27)
 
 # [1.7.0](https://github.com/Renhz/test_cra_ts/compare/1.6.2...1.7.0) (2022-04-26)
