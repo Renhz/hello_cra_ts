@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/Renhz/test_cra_ts/compare/1.8.0...1.9.0) (2022-04-27)
+
+
+### Features
+
+* inputPassword新增於onBlur時驗證密碼功能 ([c1422aa](https://github.com/Renhz/test_cra_ts/commit/c1422aaee957ffc5f71a63fe39220ae29ad958d5))
+
 # [1.8.0](https://github.com/Renhz/test_cra_ts/compare/1.7.1...1.8.0) (2022-04-27)
 
 
