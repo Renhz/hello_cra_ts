@@ -1,3 +1,5 @@
+## [1.7.1](https://github.com/Renhz/test_cra_ts/compare/1.7.0...1.7.1) (2022-04-27)
+
 # [1.7.0](https://github.com/Renhz/test_cra_ts/compare/1.6.2...1.7.0) (2022-04-26)
 
 
