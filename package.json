@@ -46,6 +46,7 @@
     "ts-jest": "^27.1.4"
   },
   "eslintConfig": {
+    "root": true,
     "extends": [
       "react-app",
       "react-app/jest",
