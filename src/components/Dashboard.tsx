@@ -10,6 +10,7 @@ import { createTheme, ThemeProvider, Theme } from '@mui/material/styles';
 import * as React from 'react';
 import { Outlet } from 'react-router-dom';
 
+import BreadcrumbsItems from './items/BreadcrumbsItems';
 import SidebarItems, { SidebarHomepage } from './items/SidebarItems';
 import DashboardContext from './myContext';
 import { DashboardAppBar, DashboardDrawer, SwitchDayNight } from './myStyled';
@@ -89,6 +90,9 @@ function Dashboard() {
             }}>
             <Toolbar />
             <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+              <Toolbar>
+                <BreadcrumbsItems />
+              </Toolbar>
               <Outlet />
             </Container>
           </Box>
