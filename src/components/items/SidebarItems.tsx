@@ -12,14 +12,8 @@ interface sidebarItem {
   to: string;
 }
 
-const sidebarItems: sidebarItem[] = [
-  { icon: <AssignmentIcon />, primary: '測試0', to: 'test0' },
-  { icon: <AssignmentIcon />, primary: '測試1', to: 'test1' },
-];
-
-function ListItemLink(props: sidebarItem) {
+function ItemLinks(props: sidebarItem) {
   const { icon, primary, to } = props;
-
   const renderLink = React.useMemo(
     () =>
       React.forwardRef<HTMLAnchorElement, Omit<LinkProps, 'to'>>((itemProps, ref) => (
@@ -29,7 +23,6 @@ function ListItemLink(props: sidebarItem) {
       )),
     [to]
   );
-
   return (
     <ListItemButton component={renderLink}>
       {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
@@ -40,14 +33,19 @@ function ListItemLink(props: sidebarItem) {
 
 export function SidebarHomepage() {
   const homepage: sidebarItem = { icon: <DashboardIcon />, primary: '首頁', to: '' };
-  return React.createElement(ListItemLink, homepage);
+  return React.createElement(ItemLinks, homepage);
 }
+
+const sidebarItems: sidebarItem[] = [
+  { icon: <AssignmentIcon />, primary: '測試0', to: 'test0' },
+  { icon: <AssignmentIcon />, primary: '測試1', to: 'test1' },
+];
 
 export default function SidebarItems() {
   return (
     <>
       {sidebarItems.map(({ primary, icon, to }) => (
-        <ListItemLink key={primary} icon={icon} to={to} primary={primary} />
+        <ItemLinks key={primary} icon={icon} to={to} primary={primary} />
       ))}
     </>
   );
