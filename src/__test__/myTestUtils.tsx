@@ -6,7 +6,7 @@ import DashboardContext from '../components/myContext';
 interface TestProviderProps {
   children: React.ReactNode;
   contextValue: {
-    [index: string]: React.Dispatch<React.SetStateAction<any>>;
+    [index: string]: any;
   };
 }
 
