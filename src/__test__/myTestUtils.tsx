@@ -1,24 +1,31 @@
-﻿import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { render, RenderOptions } from '@testing-library/react';
+﻿import { render, RenderOptions } from '@testing-library/react';
 import * as React from 'react';
 
-interface MyThemeProviderProps {
+import DashboardContext from '../components/myContext';
+
+interface TestProviderProps {
   children: React.ReactNode;
-}
-
-function MyThemeProvider({ children }: MyThemeProviderProps) {
-  const myDefault: { [index: string]: any } = {
-    theme: createTheme({
-      palette: {
-        mode: 'light',
-      },
-    }),
+  contextValue: {
+    [index: string]: React.Dispatch<React.SetStateAction<any>>;
   };
-  return <ThemeProvider theme={myDefault.theme}>{children}</ThemeProvider>;
 }
 
-const renderWithMyTheme = (ui: React.ReactElement, options?: Omit<RenderOptions, 'wrapper'>) =>
-  render(ui, { wrapper: MyThemeProvider, ...options });
+function TestProvider({ children, contextValue }: TestProviderProps) {
+  return <DashboardContext.Provider value={contextValue}>{children}</DashboardContext.Provider>;
+}
+
+interface CustomRenderOptions extends RenderOptions {
+  providerProps: Pick<TestProviderProps, 'contextValue'>;
+}
+
+const renderWithMyProviders = (
+  ui: React.ReactElement,
+  { providerProps, ...renderOptions }: CustomRenderOptions
+) =>
+  render(
+    <TestProvider contextValue={providerProps.contextValue}>{ui}</TestProvider>,
+    renderOptions
+  );
 
 export * from '@testing-library/react';
-export { renderWithMyTheme };
+export { renderWithMyProviders };
