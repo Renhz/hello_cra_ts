@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/Renhz/test_cra_ts/compare/1.9.1...1.9.2) (2022-04-28)
+
+
+### Bug Fixes
+
+* mock.calls要在test開始前會被自動清除, 要先記下 ([0dc735d](https://github.com/Renhz/test_cra_ts/commit/0dc735dc75be08899f55d2ed73e855c20f55829a))
+
 ## [1.9.1](https://github.com/Renhz/test_cra_ts/compare/1.9.0...1.9.1) (2022-04-28)
 
 # [1.9.0](https://github.com/Renhz/test_cra_ts/compare/1.8.0...1.9.0) (2022-04-27)
