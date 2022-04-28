@@ -1,10 +1,11 @@
+import { fontSize } from '@material-ui/system';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import * as React from 'react';
-import { Link, LinkProps } from 'react-router-dom';
+import { NavLink, LinkProps } from 'react-router-dom';
 
 interface sidebarItem {
   icon: React.ReactElement;
@@ -17,9 +18,9 @@ function ItemLinks(props: sidebarItem) {
   const renderLink = React.useMemo(
     () =>
       React.forwardRef<HTMLAnchorElement, Omit<LinkProps, 'to'>>((itemProps, ref) => (
-        <Link to={to} ref={ref} role={undefined} className={itemProps.className}>
+        <NavLink to={to} ref={ref} role={undefined} className={itemProps.className}>
           {itemProps.children}
-        </Link>
+        </NavLink>
       )),
     [to]
   );
