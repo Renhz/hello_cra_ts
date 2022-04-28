@@ -5,9 +5,9 @@ import * as React from 'react';
 import DashboardContext from './myContext';
 
 function SwitchColorMode({ className }: SwitchProps) {
-  const { changeTheme } = React.useContext(DashboardContext);
+  const { setTheme } = React.useContext(DashboardContext);
   const toggleColorMode = () => {
-    changeTheme(({ palette: { mode: prevMode } }: Theme) => {
+    setTheme(({ palette: { mode: prevMode } }: Theme) => {
       const newMode = prevMode === 'light' ? 'dark' : 'light';
       const newTheme = createTheme({
         palette: {

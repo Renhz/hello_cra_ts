@@ -25,7 +25,7 @@ function Dashboard() {
   const [open, setOpen] = React.useState(true);
   const context = React.useMemo(
     () => ({
-      changeTheme: setMyTheme,
+      setTheme: setMyTheme,
     }),
     []
   );
