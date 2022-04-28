@@ -2,7 +2,7 @@
 import { createTheme, Theme } from '@mui/material/styles';
 import * as React from 'react';
 
-import DashboardContext from './myContext';
+import { DashboardContext } from './myContext';
 
 function SwitchColorMode({ className }: SwitchProps) {
   const { setTheme } = React.useContext(DashboardContext);

@@ -12,7 +12,7 @@ import { Outlet } from 'react-router-dom';
 
 import BreadcrumbsItems from './items/BreadcrumbsItems';
 import SidebarItems, { SidebarHomepage } from './items/SidebarItems';
-import DashboardContext from './myContext';
+import { DashboardContext } from './myContext';
 import { DashboardAppBar, DashboardDrawer, SwitchDayNight } from './myStyled';
 
 function Dashboard() {
@@ -54,9 +54,7 @@ function Dashboard() {
                 }}>
                 <MenuIcon />
               </IconButton>
-              <Typography component="h1" variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-                Dashboard
-              </Typography>
+              <Typography component="h1" variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }} />
               <SwitchDayNight />
             </Toolbar>
           </DashboardAppBar>
@@ -89,8 +87,14 @@ function Dashboard() {
               overflow: 'auto',
             }}>
             <Toolbar />
-            <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-              <Toolbar>
+            <Container maxWidth="xl" sx={{ mt: 2, mb: 4 }}>
+              <Toolbar
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'right',
+                  px: 2,
+                }}>
                 <BreadcrumbsItems />
               </Toolbar>
               <Outlet />

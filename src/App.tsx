@@ -4,6 +4,7 @@ import { StaticRouter } from 'react-router-dom/server';
 
 import './App.css';
 import Dashboard from './components/Dashboard';
+import { RoutesContext } from './components/myContext';
 import Homepage from './pages/Homepage';
 import PageNotFound from './pages/PageNotFound';
 import Test0 from './pages/Test0';

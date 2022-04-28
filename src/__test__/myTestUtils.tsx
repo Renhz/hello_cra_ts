@@ -1,7 +1,7 @@
 ﻿import { render, RenderOptions } from '@testing-library/react';
 import * as React from 'react';
 
-import DashboardContext from '../components/myContext';
+import { DashboardContext } from '../components/myContext';
 
 interface TestProviderProps {
   children: React.ReactNode;
