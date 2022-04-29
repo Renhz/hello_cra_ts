@@ -8,7 +8,7 @@ function Test1() {
   const [result] = useState('');
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
+      <Grid container spacing={0}>
         <Grid item xs={8}>
           <Stack direction="row" spacing={2}>
             <InputPassword />

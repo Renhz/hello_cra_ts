@@ -9,7 +9,7 @@ function Test0() {
   const [count, setCount] = useState(initialCount);
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
+      <Grid container spacing={0}>
         <Grid item xs={8}>
           <Stack direction="row" spacing={2}>
             <Counter initialCount={initialCount} setCount={setCount} />
