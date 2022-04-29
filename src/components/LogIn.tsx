@@ -3,7 +3,7 @@ import React, { ChangeEvent, useState } from 'react';
 
 const validatePassword = (inputValue: string) => {
   const result = [];
-  if (!/^\w+$/.test(inputValue)) {
+  if (!/^[\w_]+$/.test(inputValue)) {
     result.push('只接受底線英文或數字');
   }
   if (inputValue.length <= 8) {
