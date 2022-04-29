@@ -1,7 +1,7 @@
 ﻿import * as React from 'react';
 import '@testing-library/jest-dom';
 
-import SwitchDayNight from '~/components/myGeneralUI';
+import SwitchColorMode from '~/components/myGeneralUI';
 
 import { renderWithMyProviders, screen, fireEvent } from './myTestUtils';
 
@@ -12,7 +12,7 @@ describe('使用於DashboardContext環境, 從useContext取得setTheme函式', (
       setTheme: mockSetTheme,
     },
   };
-  renderWithMyProviders(<SwitchDayNight />, { providerProps });
+  renderWithMyProviders(<SwitchColorMode />, { providerProps });
   const mySwitch = screen.getByRole('checkbox');
   fireEvent.click(mySwitch);
   const { calls } = mockSetTheme.mock;
