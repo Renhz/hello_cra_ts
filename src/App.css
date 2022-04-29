@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.active .MuiTouchRipple-root {
+  background-color: rgba(150,200,250,0.3)
+}

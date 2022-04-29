@@ -4,7 +4,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import * as React from 'react';
-import { Link, LinkProps } from 'react-router-dom';
+import { NavLink as Link, LinkProps } from 'react-router-dom';
 
 interface sidebarItem {
   icon: React.ReactElement;
