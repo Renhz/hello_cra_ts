@@ -9,6 +9,7 @@ import Homepage from './pages/Homepage';
 import PageNotFound from './pages/PageNotFound';
 import Test0 from './pages/Test0';
 import Test1 from './pages/Test1';
+import TestJ from './pages/TestJ';
 
 function Router(props: { children: React.ReactNode }) {
   const { children } = props;
@@ -26,6 +27,7 @@ function App() {
           <Route index element={<Homepage />} />
           <Route path="test0" element={<Test0 />} />
           <Route path="test1" element={<Test1 />} />
+          <Route path="testJ" element={<TestJ />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
