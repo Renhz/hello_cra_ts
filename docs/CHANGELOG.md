@@ -1,3 +1,10 @@
+## [1.10.3](https://github.com/Renhz/test_cra_ts/compare/1.10.2...1.10.3) (2022-04-30)
+
+
+### Bug Fixes
+
+* 修正驗證規則正規表達式, 也接受密碼包含底線 ([7d8bb87](https://github.com/Renhz/test_cra_ts/commit/7d8bb87a2591869c0c17ef3306208008499d7187))
+
 ## [1.10.2](https://github.com/Renhz/test_cra_ts/compare/1.10.1...1.10.2) (2022-04-29)
 
 ## [1.10.1](https://github.com/Renhz/test_cra_ts/compare/1.10.0...1.10.1) (2022-04-29)
