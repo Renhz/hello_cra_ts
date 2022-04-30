@@ -1,7 +1,8 @@
-﻿import React from 'react';
+﻿import Typography from '@mui/material/Typography';
+import React from 'react';
 
 function Homepage() {
-  return <h1>Unit test</h1>;
+  return <Typography variant="h4">Unit test</Typography>;
 }
 
 export default Homepage;

@@ -3,6 +3,9 @@ import React, { ChangeEvent, useState } from 'react';
 
 const validatePassword = (inputValue: string) => {
   const result = [];
+  if (!/^[\w_]+$/.test(inputValue)) {
+    result.push('只接受底線英文或數字');
+  }
   if (inputValue.length <= 8) {
     result.push('長度須大於8個字');
   }

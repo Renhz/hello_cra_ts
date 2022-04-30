@@ -5,11 +5,8 @@ import * as React from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 
 const breadcrumbNameMap: { [key: string]: string } = {
-  '/inbox': 'Inbox',
-  '/inbox/important': 'Important',
-  '/trash': 'Trash',
-  '/spam': 'Spam',
-  '/drafts': 'Drafts',
+  '/test0': '測試0',
+  '/test1': '測試1',
 };
 
 interface LinkRouterProps extends LinkProps {

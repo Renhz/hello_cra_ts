@@ -1,3 +1,13 @@
+## [1.10.2](https://github.com/Renhz/test_cra_ts/compare/1.10.1...1.10.2) (2022-04-29)
+
+## [1.10.1](https://github.com/Renhz/test_cra_ts/compare/1.10.0...1.10.1) (2022-04-29)
+
+
+### Bug Fixes
+
+* 修正驗證邏輯接受底線 ([fb160be](https://github.com/Renhz/test_cra_ts/commit/fb160bef69a781009a9c4f2497d584793e30781a))
+* 增加導引性, 例如按鈕active狀態及麵包屑導航 ([b6f445d](https://github.com/Renhz/test_cra_ts/commit/b6f445d8061e3611451bb98d98a3876ddc8ea5ef))
+
 # [1.10.0](https://github.com/Renhz/test_cra_ts/compare/1.9.2...1.10.0) (2022-04-28)
 
 

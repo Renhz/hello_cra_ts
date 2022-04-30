@@ -87,12 +87,12 @@ function Dashboard() {
               overflow: 'auto',
             }}>
             <Toolbar />
-            <Container maxWidth="xl" sx={{ mt: 2, mb: 4 }}>
+            <Container maxWidth="xl" sx={{ mt: 2, mb: 4, px: 4 }}>
               <Toolbar
                 sx={{
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'right',
+                  justifyContent: 'end',
                   px: 2,
                 }}>
                 <BreadcrumbsItems />
