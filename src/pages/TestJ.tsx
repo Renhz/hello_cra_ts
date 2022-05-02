@@ -8,7 +8,7 @@ function hanoi(disc: number, src: number = 2, aux: number = 1, dst: number = 0):
   for (let i = 1; i <= disc; i += 1) {
     discs.push(i);
   }
-  const towers = ['A柱','B柱','C柱'];
+  const towers = ['A柱', 'B柱', 'C柱'];
   const state: any[] = [[], [], [...discs]];
   let result = '';
   function move(idx: number, s: number = 2, a: number = 1, d: number = 0): any | never {
