@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/Renhz/test_cra_ts/compare/1.10.3...1.11.0) (2022-05-02)
+
+
+### Features
+
+* 使用redux 修改與主題有關元件及專案資料夾架構 ([c96f9bb](https://github.com/Renhz/test_cra_ts/commit/c96f9bbe44e74d4e69040e1fe2ce1ffa8176edf8))
+
 ## [1.10.3](https://github.com/Renhz/test_cra_ts/compare/1.10.2...1.10.3) (2022-04-30)
 
 
