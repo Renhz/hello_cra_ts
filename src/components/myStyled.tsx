@@ -1,8 +1,8 @@
-﻿import { Drawer, Switch, Paper } from '@mui/material/';
+﻿import { Drawer, Paper } from '@mui/material/';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import { styled } from '@mui/material/styles';
 
-import SwitchColorMode from './myGeneralUI';
+import SwitchColorMode from '../features/theme/SwitchColorMode';
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;

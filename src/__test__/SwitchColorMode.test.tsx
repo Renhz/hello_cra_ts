@@ -1,7 +1,7 @@
 ﻿import * as React from 'react';
 import '@testing-library/jest-dom';
 
-import SwitchColorMode from '~/components/myGeneralUI';
+import SwitchColorMode from '~/features/theme/SwitchColorMode';
 
 import { renderWithMyProviders, screen, fireEvent } from './myTestUtils';
 
