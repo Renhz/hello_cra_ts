@@ -1,3 +1,5 @@
+## [1.11.3](https://github.com/Renhz/test_cra_ts/compare/1.11.2...1.11.3) (2022-05-03)
+
 ## [1.11.2](https://github.com/Renhz/test_cra_ts/compare/1.11.1...1.11.2) (2022-05-03)
 
 ## [1.11.1](https://github.com/Renhz/test_cra_ts/compare/1.11.0...1.11.1) (2022-05-03)
