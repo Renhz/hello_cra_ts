@@ -1,32 +1,22 @@
-﻿import * as React from 'react';
+﻿import { render } from '@testing-library/react';
+import * as React from 'react';
 import '@testing-library/jest-dom';
+import { Provider } from 'react-redux';
 
+import { store } from '~/features/store';
 import SwitchColorMode from '~/features/theme/SwitchColorMode';
 
-import { renderWithMyProviders, screen, fireEvent } from './myTestUtils';
+import { screen, fireEvent } from './myTestUtils';
 
-describe('使用於DashboardContext環境, 從useContext取得setTheme函式', () => {
-  const mockSetTheme = jest.fn();
-  const providerProps = {
-    contextValue: {
-      setTheme: mockSetTheme,
-    },
-  };
-  renderWithMyProviders(<SwitchColorMode />, { providerProps });
+describe('<SwitchColorMode/> 渲染於redux環境', () => {
+  render(
+    <Provider store={store}>
+      <SwitchColorMode />
+    </Provider>
+  );
   const mySwitch = screen.getByRole('checkbox');
-  fireEvent.click(mySwitch);
-  const { calls } = mockSetTheme.mock;
-  test('點選switch成功呼叫setTheme', () => {
-    expect(calls.length).toBe(1);
-  });
-  test('setTheme收到的update函式邏輯正確', () => {
-    const themeInit = {
-      palette: { mode: 'light' },
-    };
-    const toggle = calls[0][0];
-    const themeChanged = toggle(themeInit);
-    const themeChangedBack = toggle(themeChanged);
-    expect(themeChanged.palette.mode).toBe('dark');
-    expect(themeChangedBack.palette.mode).toBe('light');
+  test('theme.colorMode預設為light，點選switch後切換為dark', () => {
+    fireEvent.click(mySwitch);
+    expect(store.getState().theme.colorMode).toBe('dark');
   });
 });
