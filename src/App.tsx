@@ -1,9 +1,11 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { StaticRouter } from 'react-router-dom/server';
 
 import './App.css';
 import Dashboard from './components/Dashboard';
+import { store } from './features/store';
 import Homepage from './pages/Homepage';
 import PageNotFound from './pages/PageNotFound';
 import Test0 from './pages/Test0';
@@ -20,17 +22,19 @@ function Router(props: { children: React.ReactNode }) {
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Dashboard />}>
-          <Route index element={<Homepage />} />
-          <Route path="test0" element={<Test0 />} />
-          <Route path="test1" element={<Test1 />} />
-          <Route path="testJ" element={<TestJ />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Route>
-      </Routes>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Dashboard />}>
+            <Route index element={<Homepage />} />
+            <Route path="test0" element={<Test0 />} />
+            <Route path="test1" element={<Test1 />} />
+            <Route path="testJ" element={<TestJ />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Route>
+        </Routes>
+      </Router>
+    </Provider>
   );
 }
 
