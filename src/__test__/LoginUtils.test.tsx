@@ -1,6 +1,6 @@
 ﻿import '@testing-library/jest-dom';
 
-import { validatePassword, generateHelptext } from '~/features/member/LoginUtils';
+import { validatePassword } from '~/features/member/LoginUtils';
 
 describe('密碼驗證函式，測試驗證次序及回傳結果', () => {
   // "illegalCharacter" | "tooShort" | "oneUpperCase" | "oneNumber" | "ok"
