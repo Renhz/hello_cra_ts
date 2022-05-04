@@ -41,70 +41,14 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-universe": "^11.0.0-beta.0",
     "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
     "husky": "^7.0.4",
     "nodemon": "^2.0.15",
     "semantic-release": "^19.0.2",
     "ts-jest": "^27.1.4"
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "airbnb",
-      "universe/web",
-      "universe/shared/typescript-analysis"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "*.ts",
-          "*.tsx",
-          "*.d.ts"
-        ],
-        "parserOptions": {
-          "project": "./tsconfig.json"
-        },
-        "rules": {
-          "import/extensions": [
-            "error",
-            "ignorePackages",
-            {
-              "js": "never",
-              "jsx": "never",
-              "ts": "never",
-              "tsx": "never"
-            }
-          ],
-          "react/jsx-filename-extension": [
-            1,
-            {
-              "extensions": [
-                ".tsx",
-                ".ts"
-              ]
-            }
-          ],
-          "react/jsx-props-no-spreading": 1
-        }
-      }
-    ],
-    "settings": {
-      "import/resolver": {
-        "typescript": {
-          "alwaysTryTypes": true,
-          "project": "./"
-        }
-      }
-    },
-    "ignorePatterns": [
-      "dist/**/*.js"
-    ],
-    "rules": {
-      "import/no-unresolved": "error",
-      "import/no-named-as-default": 0,
-      "import/no-named-as-default-member": 0
-    }
   },
   "jest": {
     "moduleNameMapper": {

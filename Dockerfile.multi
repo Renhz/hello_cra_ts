@@ -15,8 +15,7 @@ COPY package*.json /app/
 WORKDIR /app
 
 # 安裝依賴
-RUN npm install
-RUN npm -D install
+RUN npm install --production=false
 
 # 把所有原始碼拷貝到/app
 COPY . /app
