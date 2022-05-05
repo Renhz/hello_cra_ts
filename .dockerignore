@@ -1,2 +1,6 @@
 ﻿node_modules
+.eslintrc.json
+.prettierrc
 build
+coverage
+README.md
