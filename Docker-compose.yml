@@ -1,0 +1,24 @@
+﻿services: 
+  # db:
+  #   image: 
+  #   restart: always
+  # backend:
+  #   build: Dockerfile.mini
+  #   restart: always
+  #   ports:
+  #     - 3000:3000
+  frontend_mini:
+    build: 
+      context: .
+      dockerfile: Dockerfile.mini
+    restart: always
+    ports:
+    - 8080:8080
+  frontend_nginx:
+    build: 
+      context: .
+      dockerfile: Dockerfile.nginx
+    restart: always
+    ports:
+      - 80:80
+
