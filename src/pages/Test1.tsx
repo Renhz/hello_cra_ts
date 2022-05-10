@@ -1,8 +1,8 @@
 ﻿import { Box, Grid, Stack, Typography } from '@mui/material';
 import React, { useState } from 'react';
 
-import { InputPassword } from 'components/LogIn';
 import { MyPaper } from 'components/myStyled';
+import { InputPassword } from '~/features/member/LogIn';
 
 function Test1() {
   const [result] = useState('');
