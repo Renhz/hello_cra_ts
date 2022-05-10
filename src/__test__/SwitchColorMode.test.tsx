@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { store } from '~/features/store';
 import SwitchColorMode from '~/features/theme/SwitchColorMode';
 
-import { screen, fireEvent } from './myTestUtils';
+import { screen, fireEvent } from '@testing-library/react';
 
 describe('<SwitchColorMode/> 渲染於redux環境', () => {
   test('theme.colorMode預設為light，點選switch後切換為dark', () => {
