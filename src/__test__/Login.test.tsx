@@ -2,7 +2,7 @@
 import * as React from 'react';
 import '@testing-library/jest-dom';
 
-import { InputPassword } from '~/components/LogIn';
+import { InputPassword } from '~/features/member/LogIn';
 import * as loginUtils from '~/features/member/LoginUtils';
 
 describe('密碼輸入欄位', () => {
@@ -32,14 +32,14 @@ describe('密碼輸入欄位', () => {
   });
   test('傳給generateHelptext的參數正確', () => {
     const textBox = setup();
-    mockValidatePassword.mockReturnValue('illegalCharacter');
+    mockValidatePassword.mockReturnValue(1);
     fireEvent.change(textBox, { target: { value: 'testInput' } });
-    expect(mockGenerateHelptext.mock.calls[0]?.[0]).toBe('illegalCharacter');
+    expect(mockGenerateHelptext.mock.calls[0]?.[0]).toBe(1);
   });
   test('依generateHelptext回傳文字顯示錯誤提示', () => {
     const textBox = setup();
-    mockGenerateHelptext.mockReturnValue('fakeHelptext');
+    mockGenerateHelptext.mockReturnValue('fake helptext');
     fireEvent.change(textBox, { target: { value: 'testInput' } });
-    expect(screen.getByText('fakeHelptext')).toBeTruthy();
+    expect(screen.getByText('fake helptext')).toBeTruthy();
   });
 });

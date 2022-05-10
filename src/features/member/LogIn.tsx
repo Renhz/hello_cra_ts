@@ -1,7 +1,7 @@
 ﻿import TextField from '@mui/material/TextField';
 import React, { ChangeEvent, useState } from 'react';
 
-import { validatePassword, generateHelptext } from '../features/member/LoginUtils';
+import { validatePassword, generateHelptext } from './LoginUtils';
 
 export const InputPassword = function InputPassword() {
   const [inputValue, setInputValue] = useState('');

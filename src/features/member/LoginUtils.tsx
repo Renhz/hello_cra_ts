@@ -1,56 +1,82 @@
-﻿export const validatePassword = (inputValue: string) => {
+﻿export const enum ErrorCodePassword {
+  ok,
+  illegalCharacter,
+  tooShort,
+  oneUpperCase,
+  oneNumber,
+  unknown,
+}
+enum Languages {
+  ch,
+  en,
+}
+// type HelptextMap = Record<keyof typeof Languages, Record<keyof typeof ErrorCodePassword, string>>;
+
+export const validatePassword = (inputValue: string): ErrorCodePassword => {
   if (!/^[\w_]*$/.test(inputValue)) {
-    return 'illegalCharacter';
+    return ErrorCodePassword.illegalCharacter;
   }
   if (inputValue.length <= 8) {
-    return 'tooShort';
+    return ErrorCodePassword.tooShort;
   }
   if (!/[A-Z]+/.test(inputValue)) {
-    return 'oneUpperCase';
+    return ErrorCodePassword.oneUpperCase;
   }
   if (!/[\d]+/.test(inputValue)) {
-    return 'oneNumber';
+    return ErrorCodePassword.oneNumber;
   }
-  return 'ok';
+  return ErrorCodePassword.ok;
 };
 
-type ErrorCodePassword =
-  | 'ok'
-  | 'illegalCharacter'
-  | 'tooShort'
-  | 'oneUpperCase'
-  | 'oneNumber'
-  | 'unknown';
-
-interface HelptextMap {
-  ch: string;
-}
-
-type Lang = keyof HelptextMap;
-
-export function generateHelptext(errorcode: ErrorCodePassword, lang: Lang = 'ch'): string {
-  const helptextMap: Record<ErrorCodePassword, HelptextMap> = {
-    ok: {
-      ch: '',
-    },
-    illegalCharacter: {
-      ch: '只接受底線英文或數字',
-    },
-    tooShort: {
-      ch: '長度須超過8個字',
-    },
-    oneUpperCase: {
-      ch: '須包含至少1個大寫英文字',
-    },
-    oneNumber: {
-      ch: '須包含至少1個數字',
-    },
-    unknown: {
-      ch: '未知錯誤',
-    },
-  };
-  if (helptextMap[errorcode]) {
-    return helptextMap[errorcode][lang];
+export const generateHelptext = (
+  errorcode: ErrorCodePassword,
+  lang: Languages = Languages.ch
+): string => {
+  switch (lang) {
+    case Languages.ch:
+      switch (errorcode) {
+        case ErrorCodePassword.ok:
+          return '';
+        case ErrorCodePassword.illegalCharacter:
+          return '只接受底線英文或數字';
+        case ErrorCodePassword.tooShort:
+          return '長度須超過8個字';
+        case ErrorCodePassword.oneUpperCase:
+          return '須包含至少1個大寫英文字';
+        case ErrorCodePassword.oneNumber:
+          return '須包含至少1個數字';
+        case ErrorCodePassword.unknown:
+          return '未知錯誤';
+        default:
+          return '未知錯誤';
+      }
+    default:
+      switch (errorcode) {
+        case ErrorCodePassword.ok:
+          return '';
+        case ErrorCodePassword.illegalCharacter:
+          return '只接受底線英文或數字';
+        case ErrorCodePassword.tooShort:
+          return '長度須超過8個字';
+        case ErrorCodePassword.oneUpperCase:
+          return '須包含至少1個大寫英文字';
+        case ErrorCodePassword.oneNumber:
+          return '須包含至少1個數字';
+        case ErrorCodePassword.unknown:
+          return '未知錯誤';
+        default:
+          return '未知錯誤';
+      }
   }
-  return helptextMap.unknown[lang] ?? helptextMap.unknown.ch;
-}
+};
+
+/* 
+      ErrorCodePassword.ok: '',
+      ErrorCodePassword.illegalCharacter:'只接受底線英文或數字',
+      ErrorCodePassword.tooShort: '長度須超過8個字',
+      ErrorCodePassword.oneUpperCase: '須包含至少1個大寫英文字',
+      ErrorCodePassword.oneNumber: '須包含至少1個數字',
+      ErrorCodePassword.unknown: '未知錯誤',  
+
+
+*/
